@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Expense Tracker</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+<div class="sidebar">
+
+<h2>💰 FinTrack</h2>
+
+<ul>
+<li>Dashboard</li>
+<li>Analytics</li>
+<li>Reports</li>
+</ul>
+
+<button id="darkToggle">🌙 Dark Mode</button>
+
+</div>
+
+
+<div class="main">
+
+<h1>Expense Dashboard</h1>
+
+<div class="cards">
+
+<div class="card gradient1">
+<h3>Total Expenses</h3>
+<p id="total">₹0</p>
+</div>
+
+<div class="card gradient2">
+<h3>This Month</h3>
+<p id="monthTotal">₹0</p>
+</div>
+
+<div class="card gradient3">
+<h3>Transactions</h3>
+<p id="transactionCount">0</p>
+</div>
+
+</div>
+
+
+<div class="addBox">
+
+<input id="title" placeholder="Expense name">
+<input id="amount" type="number" placeholder="Amount">
+<input id="category" placeholder="Category">
+
+<button onclick="addExpense()">Add</button>
+
+</div>
+
+
+<div class="listCard">
+
+<h3>Recent Expenses</h3>
+
+<ul id="expenseList"></ul>
+
+</div>
+
+
+<div class="chartSection">
+
+<h2>Expense Analytics</h2>
+
+<div class="charts">
+
+<div class="chartCard">
+<h3>Category Analytics</h3>
+<canvas id="expenseChart"></canvas>
+</div>
+
+<div class="chartCard">
+<h3>Monthly Spending</h3>
+<canvas id="monthlyChart"></canvas>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+body{
+margin:0;
+font-family:Arial;
+
+background: linear-gradient(135deg,#667eea,#764ba2,#ff758c,#42e695);
+background-size:400% 400%;
+animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.app{
+display:flex;
+min-height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+width:220px;
+background:#1e293b;
+color:white;
+padding:20px;
+}
+
+.sidebar ul{
+list-style:none;
+padding:0;
+}
+
+.sidebar li{
+margin:10px 0;
+}
+
+.sidebar button{
+margin-top:20px;
+padding:10px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* Main */
+
+.main{
+flex:1;
+padding:30px;
+}
+
+/* Cards */
+
+.cards{
+display:flex;
+gap:20px;
+}
+
+.card{
+flex:1;
+padding:20px;
+border-radius:15px;
+color:white;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.gradient1{
+background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.gradient2{
+background:linear-gradient(135deg,#43e97b,#38f9d7);
+}
+
+.gradient3{
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+}
+
+/* Add Box */
+
+.addBox{
+margin-top:20px;
+}
+
+.addBox input{
+padding:10px;
+margin-right:10px;
+border-radius:8px;
+border:none;
+}
+
+.addBox button{
+padding:10px 15px;
+border:none;
+border-radius:8px;
+background:#4f46e5;
+color:white;
+cursor:pointer;
+}
+
+/* Expense List */
+
+.listCard{
+background:white;
+padding:20px;
+border-radius:15px;
+margin-top:20px;
+}
+
+#expenseList{
+list-style:none;
+padding:0;
+}
+
+#expenseList li{
+display:flex;
+justify-content:space-between;
+padding:10px 0;
+border-bottom:1px solid #eee;
+}
+
+#expenseList button{
+background:red;
+color:white;
+border:none;
+border-radius:5px;
+padding:5px 10px;
+}
+
+/* Charts */
+
+.chartSection{
+margin-top:30px;
+}
+
+.charts{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.chartCard{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+width:48%;
+}
+
+.chartCard canvas{
+width:100% !important;
+height:350px !important;
+}
+
+/* Dark Mode */
+
+.dark{
+background:#0f172a;
+color:white;
+}
+
+.dark .listCard,
+.dark .chartCard{
+background:#1e293b;
+color:white;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.app{
+flex-direction:column;
+}
+
+.cards{
+flex-direction:column;
+}
+
+.charts{
+flex-direction:column;
+}
+
+.chartCard{
+width:100%;
+}
+
+.sidebar{
+width:100%;
+}
+
+}
